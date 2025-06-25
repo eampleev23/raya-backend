@@ -68,8 +68,8 @@ func run() error {
 		router.Post("/api/user/logout/", handlers.Logout)
 	})
 
-	//err = http.ListenAndServe(servConfig.RunAddr, routers)
-	err = http.ListenAndServeTLS(servConfig.RunAddr, "server.crt", "server.key", routers)
+	err = http.ListenAndServe(servConfig.RunAddr, routers)
+	//err = http.ListenAndServeTLS(servConfig.RunAddr, "server.crt", "server.key", routers)
 	if err != nil {
 		return fmt.Errorf("failed to start server: %w", err)
 	}
