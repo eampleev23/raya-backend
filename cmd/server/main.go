@@ -22,6 +22,7 @@ func main() {
 }
 
 func run() error {
+
 	servConfig := server_config.NewServerConfig()
 	logger, err := logger.NewZapLogger(servConfig.LogLevel)
 	if err != nil {
