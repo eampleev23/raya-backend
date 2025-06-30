@@ -34,6 +34,8 @@ func (c *ServerConfig) SetValues() {
 	// принимаем секретный ключ сервера для авторизации
 	flag.StringVar(&c.SecretKey, "s", "e4853f5c4810101e88f1898db21c15d3", "server's secret key for authorization")
 
+	flag.Parse()
+
 	if envRunAddr := os.Getenv("RUN_ADDRESS"); envRunAddr != "" {
 		c.RunAddr = envRunAddr
 	}
