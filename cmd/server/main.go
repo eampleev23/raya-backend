@@ -24,6 +24,7 @@ func main() {
 func run() error {
 
 	servConfig := server_config.NewServerConfig()
+	fmt.Println("servConfig.DBDSN=", servConfig.DBDSN)
 	logger, err := logger.NewZapLogger(servConfig.LogLevel)
 	if err != nil {
 		return fmt.Errorf("failed to create zap logger: %w", err)
