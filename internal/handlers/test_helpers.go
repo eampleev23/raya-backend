@@ -7,8 +7,8 @@ import (
 	"github.com/eampleev23/raya-backend.git/internal/models"
 	"github.com/eampleev23/raya-backend.git/internal/server_config"
 	"github.com/eampleev23/raya-backend.git/internal/store"
-	"github.com/jackc/pgconn"
 	"github.com/jackc/pgerrcode"
+	"github.com/jackc/pgx/v5/pgconn"
 )
 
 // Общие тестовые переменные.

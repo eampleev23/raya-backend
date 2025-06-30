@@ -3,6 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"github.com/eampleev23/raya-backend.git/internal/auth"
+	"github.com/eampleev23/raya-backend.git/internal/logger"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"net/http"
 	"net/http/httptest"
 	"testing"
