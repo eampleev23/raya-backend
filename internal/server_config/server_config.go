@@ -31,7 +31,6 @@ func (c *ServerConfig) SetValues() {
 	flag.StringVar(&c.DBDSN, "d", "postgresql://raya-local:raya-local@localhost:5432/raya_local_corp?sslmode=disable", "postgres database")
 	// принимаем секретный ключ сервера для авторизации
 	flag.StringVar(&c.SecretKey, "s", "e4853f5c4810101e88f1898db21c15d3", "server's secret key for authorization")
-
 	flag.Parse()
 
 	if envRunAddr := os.Getenv("RUN_ADDRESS"); envRunAddr != "" {
